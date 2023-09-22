@@ -1,4 +1,4 @@
-module github.com/sowju/probes
+module github.com/sowjumn/probes
 
 go 1.20
 
