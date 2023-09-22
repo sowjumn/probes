@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: probes-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: probes
+  template:
+    metadata:
+      labels:
+        app: probes
+    spec:
+      containers:
+        - name: probes-container
+          image: probes-image:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5 #
+            periodSeconds: 10
