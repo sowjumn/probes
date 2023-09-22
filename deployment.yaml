@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: probes-container
-          image: probes-image:latest
+          image: mountainpinelake/probe-hello:latest
           ports:
             - containerPort: 8080
           readinessProbe:
