@@ -21,6 +21,11 @@ func main() {
 		w.Write([]byte("Hello, World!"))
 	})
 
+	r.Get("/health", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("Hello, World!"))
+	})
+
 	// Start the web server on port 8080.
 	http.ListenAndServe(":8080", r)
 }
