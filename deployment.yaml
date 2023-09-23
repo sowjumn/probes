@@ -16,7 +16,7 @@ spec:
         - name: probes-container
           image: mountainpinelake/probe-hello:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           readinessProbe:
             httpGet:
               path: /health
