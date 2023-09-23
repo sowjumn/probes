@@ -1,10 +1,10 @@
-# This Repository holds an example of an app deployed on Kubernetes
+# Example of an app deployed on Kubernetes
 
 The repo has one Go file app.go which has two endpoints '/' and '/health'
 
 In order to deploy this app onto Kubernetes we need to create a Docker image and push to the Docker Hub
 
-## Following are the steps to push the Docker image of the Go app onto Dockerhub
+## Steps to push the Docker image of the Go app onto Dockerhub
 
 ### Build the Docker Image 
 `docker build --tag probes .`
